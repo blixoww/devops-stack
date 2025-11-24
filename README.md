@@ -42,12 +42,23 @@ GitHub → Jenkins (Docker)
 
 ## Captures d’écran
 
-Pipeline Jenkins réussie
-Dashboard Grafana (RAM, CPU)
-Pod k3s en Running
-SonarQube analysis
+### 1. Pipeline Jenkins
+<div align="center">
+  <img src="https://github.com/blixoww/devops-stack/blob/main/grafana/data/Jenkins.png" width="900" alt="Jenkins Pipeline"/>
+  <br><br>
+</div>
 
-## Fonctionnement de la pipeline Jenkins (Jenkinsfile)
+### 2. Dashboard Grafana (RAM + CPU)
+<div align="center">
+  <img src="https://github.com/blixoww/devops-stack/blob/main/grafana/data/Grafana%20Dashboard.png" width="900" alt="Jenkins Pipeline"/>
+  <br><br>
+</div>
+
+### 3. Prometheus – (Requêtes pour utilisation de la RAM)
+<div align="center">
+  <img src="https://github.com/blixoww/devops-stack/blob/main/grafana/data/Prometheus.png" width="900" alt="Jenkins Pipeline"/>
+  <br><br>
+</div>
 
 1. Clone du repo
 2. `mvn clean test`
