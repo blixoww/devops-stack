@@ -21,14 +21,6 @@ Build → Test → Analyse de code → Packaging Docker → Déploiement Kuberne
 - Monitoring complet avec Prometheus + Grafana
 - Script bash de packaging propre (exclusion des données sensibles)
 
-## Architecture globale
-
-GitHub → Jenkins (Docker)
-├── Maven build & tests
-├── SonarQube scan
-├── docker build → employee-api:latest
-└── kubectl apply → k3s (pod + service)
-
 ## Stack technique
 
 | Composant          | Technologie                     | Port  |
