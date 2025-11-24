@@ -40,6 +40,13 @@ GitHub → Jenkins (Docker)
 | Monitoring         | Prometheus + Grafana             | 9090 / 3000 |
 | Application        | Spring Boot → Docker → k3s       | 8082  |
 
+## Captures d’écran
+
+Pipeline Jenkins réussie
+Dashboard Grafana (RAM, CPU)
+Pod k3s en Running
+SonarQube analysis
+
 ## Fonctionnement de la pipeline Jenkins (Jenkinsfile)
 
 1. Clone du repo
