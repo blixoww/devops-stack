@@ -1,18 +1,14 @@
 #!/bin/sh
-# Script pour créer un devops-stack.zip propre – fonctionne à tous les coups
 
 WORKDIR="/home/admin/devops-stack"
-ZIPFILE="/home/admin/devops-stack-clean.zip"   # zip créé à l'extérieur → jamais inclus par erreur
+ZIPFILE="/home/admin/devops-stack-clean.zip"
 
-# Vérifie qu’on est dans le bon dossier
 cd "$WORKDIR" || { echo "Erreur : répertoire $WORKDIR introuvable"; exit 1; }
 
-# Supprime l’ancien zip s’il existe
 [ -f "$ZIPFILE" ] && rm -f "$ZIPFILE"
 
 echo "Création de $ZIPFILE en cours (exclusions appliquées)..."
 
-# LA LIGNE QUI MARCHE VRAIMENT (tout est dans l’ordre et les motifs sont corrects)
 sudo zip -r "$ZIPFILE" . \
     -x 'jenkins/jenkins_home/*' \
        'jenkins/data/*' \
@@ -20,7 +16,6 @@ sudo zip -r "$ZIPFILE" . \
        'employee-api/target/*' \
        > /dev/null
 
-# Message de succès + taille finale
 if [ $? -eq 0 ]; then
     SIZE=$(du -h "$ZIPFILE" | cut -f1)
     echo "Zip créé avec succès : $ZIPFILE ($SIZE)"
